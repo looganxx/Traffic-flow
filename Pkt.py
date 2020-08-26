@@ -17,7 +17,7 @@ class PacketsStr:
         self.connection = []
 
     #insert a package or in a unknown package queue or in a queue 
-    # that representing the packages not yet analized
+    # that representing the packages not yet analyzed
     def insertPkt(self, pkt):
         if pkt['protocol'] == 'TCP':
             if pkt['in/out'] == None :

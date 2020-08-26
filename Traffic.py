@@ -35,12 +35,12 @@ def main():
     ipaddress = ni.ifaddresses(interface)[ni.AF_INET][0]['addr']
 
     #-------------------------------------------------------------------------------------------#
-    #two data structure used to analize packets and store the flows
+    #two data structure used to analyze packets and store the flows
     global buff
     buff = Buffer()
     pkt_str = PacketsStr()
 
-    #threads used to analize the flows and their content
+    #threads used to analyze the flows and their content
     dispatcher = Dispatcher(buff, pkt_str, ipaddress)
     scanner = PortScanner(pkt_str)
     visual = Visual(pkt_str)
@@ -74,10 +74,7 @@ def main():
     print("\nUnknown packets: %d" % len(pkt_str.unknown))
     print("Packets of unknown process: %d" % len(pkt_str.unanalizedPkt))
     print("Total packets: %d" % len(capture))
-
-    #print(pkt_str.unknown)
-    #print( '\n\n\n\n')
-    #print(pkt_str.unanalizedPkt )
+    
 
 if __name__ == "__main__":
     main()
