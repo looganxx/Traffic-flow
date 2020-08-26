@@ -13,7 +13,8 @@ For the use you need to run:
 ```
 make install
 ```
-this install all the module that you need, then: 
+this install all the module that you need, \
+then: 
 ```
 make test
 ```
