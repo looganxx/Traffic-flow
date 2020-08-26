@@ -13,7 +13,7 @@ For the use you need to run:
 ```
 make install
 ```
-this install all the module that you need, \
+this install all the python module that you need, \
 then: 
 ```
 make test
