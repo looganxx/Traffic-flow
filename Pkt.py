@@ -24,7 +24,6 @@ class PacketsStr:
         self.unanalizedPkt = []
         self.unknown = []
         self._lockPkts = Condition()
-        self.connection = []
 
     #insert a package or in a unknown package queue or in a queue 
     # that representing the packages not yet analyzed
