@@ -8,6 +8,9 @@ from scapy.all import *
 from socket import *
 import psutil
 from datetime import datetime
+import os
+from subprocess import Popen, PIPE
+
 
 
 class Visual(Thread):
@@ -34,6 +37,14 @@ class Visual(Thread):
             self.pkt_str.unanalizedPkt.clear()
             self.pkt_str._lockPkts.release()
             connections = psutil.net_connections()
+            #for c in connections:
+             # print(psutil.Process(c.pid).name(), c.pid, c.status)
+            #subprocess.call('clear', shell=True)
+            #for proc in psutil.process_iter(['pid', 'name']):
+             #print(proc.info)
+            #op = os.popen("netstat -tupn").readlines()
+            #for p in op:
+            #  print(p)
 
             if not self.term.is_set():
                 for p in newlist:
@@ -94,7 +105,6 @@ class Visual(Thread):
 
             #-------------------------------------------------------------------------------------------#
             #print information about flows
-
             subprocess.call('clear', shell=True)
             table = []
 
